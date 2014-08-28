@@ -10,6 +10,8 @@ print("We promote better Africa")
 print("African need mathematician")
 print("1+4")
 print("_+3")
+print("Hello,Python!")
+
 
 
 
