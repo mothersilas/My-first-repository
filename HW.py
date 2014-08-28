@@ -1,4 +1,7 @@
-Print("hello ghana")
+
+print("hello Ethiopia")
+
+
 
 
 
