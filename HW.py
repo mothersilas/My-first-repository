@@ -8,7 +8,7 @@ print("Africa will be better developed!")
 print("We Africans!")
 print("We promote better Africa")
 print("African need mathematician")
-prin("1+4")
+print("1+4")
 print("_+3")
 
 
