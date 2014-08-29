@@ -1,40 +1,58 @@
-# ===============Geometry ================================
+
+from numpy import *
 from numbers import Number
-
-def square_perimeter(side : Number) -> Number:
+import math
+from math import sqrt
+#================= problem 1 ===============================
+def circle_perimeter(radius: Number) -> Number:
     """
-    calculate perimeter of a square from side length.
-    :param side: the side length
-    :return: the perimeter (same unit as side length)
-    >>> square_perimeter(4)
-    16
+    calculate the perimeter of a circle given its radius.
+    :param radius: the radius of a circle.
+    :return: the perimeter(radius units)
+    >>> circle_perimeter(3)
+
+    18.84955592153876
     """
-
-    return 4*side
-
-
-
-def square_area(side):
+    return 2*pi*radius
+#=================== end of problem ======================
+#=================== problem 2 ============================
+def perimeter_triangle(side1,side2,side3 : Number) -> Number:
     """
-    calculate area of a square from side length.
-    :param side: the side length
-    :return: the area (units^2 from side)
-    >>> square_area(4)
-    16
+    calculate the area of any triangle given its three sides side1,side2 and side3.
+    :param side1: the first side of the triangle.
+    :param side2: the second side of the triangle.
+    :param side3: the third side of the triangle.
+    :return: the area of the triangle(perimeter = side1+side2+side3)
+    >>> perimeter_triangle(3,4,6)
+    13
     """
-    return side*side
-if __name__ =="_main_":
-    sampleSide = 4
-    print("area:",
-          square_area(sampleSide),
-             "perimeter:",
-   square_perimeter(sampleSide))
+    return side1+side2+side3
+print(perimeter_triangle(3,4,6))
+#======================== end of problem 2 ===========================
+#======================== begining problem 3 ==========================
+def area_triangle(a,b,c: Number) -> Number:
+    """
+    calculate area of any triangle given its three sides.
+    :param a: the first side of the triangle.
+    :param b: the second side of the triangle.
+    :param c: the third side of the triangle.
+    :return: the area of the triangle(area = math.sqrt((a+b+c)/2.0)*((a+b+c)/2.0-a)*((a+b+c)/2.0-b)*((a+b+c)/2.0-c)))
+    >>> area_triangle(10,2,9)
+    20.657360976175056
 
-print(square_area(2))
-print(square_perimeter(5))
-print(square_perimeter(1))
+    """
+    return math.sqrt((a+b+c)/2.0)*((a+b+c)/2.0-a)*((a+b+c)/2.0-b)*((a+b+c)/2.0-c)
+
+#========================= end of problem 3 ==============================================
+#========================= begining problem 4 ============================================
 
 
 
-# =====================End==========================================
+
+
+
+
+
+
+
 
