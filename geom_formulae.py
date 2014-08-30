@@ -93,9 +93,9 @@ def volume_sphere(r: Number) -> Number:
 
 #============================== end of problem 6 ===========================================
 
-#============================= begining of problem 7 =======================================
 
-def volume_Pyramid(basearea,heigth: Number) -> Number:
+#============================= begining of problem 7 =======================================
+def volume_pyramid(basearea, heigth: Number) -> Number:
     """
     calculate the volume of a pyramid with base area and heigth given.
     @param basearea: the base area of the payramid.
@@ -110,7 +110,8 @@ def volume_Pyramid(basearea,heigth: Number) -> Number:
 
 #=============================== begining of problem 8 =====================================
 
-def lateralarea_prism(p,h: Number) -> Number:
+
+def lateralarea_prism(p, h: Number) -> Number:
     """
     calculate the lateral area of a prism given its perimeter and heigth.
     @param p: the perimeter of the prism.
@@ -152,11 +153,63 @@ def volume_frustumcone(R,r,h: Number) -> Number:
     return pi*h*(R**2+R*r+r**2)/3
 #================================== end of problem 10 ==========================================
 
+#================================== begining of problem 11 ====================================
+def area_rhom(b, a: Number) ->Number:
+    """
+    calculate the area of a rhombus given its base length and heigth.
+    :param b: the base length of the rhombus.
+    :param a: the heigth of the rhombus.
+    :return: the area of the rhombus(area = b*a)
+    >>> area_rhom(10,2)
+    20
+
+    """
+    return b*a
+#================================== end of problem 11 ====================================
+
+#================================== begining of problem 12 ===============================
 
 
+def area_rhombus(s, theta) -> Number:
+    """
+    calculate the area of a rhombus given one side and interior angle.
+    :param s: the length a side.
+    :param theta: interior angle of the triangle.
+    :return: the area of the rhombus( area = sin(theta)*s**2)
+    >>> area_rhombus(2, pi/2)
+      4
+    """
+    area = sin(theta)*(s**2)
+    return area
 
+#====================================== end of problem 12 ===============================
+#====================================== begining of problem 13 ==========================
 
+def area_rhombus(b=None, a=None, d1=None, d2=None, s=None, theta=None):
+    """
+    Calculate the area of a rhombus given different parameters.
 
-
+    @param b: the length of the base of the rhombus.
+    @param a: the heigth of the rhombus.
+    @param d1: the length of one diagonal of the rhombus.
+    @param d2: the length of the other diagonal of the rhombus.
+    @return: the area of a rhombus(area = b*a,d1*d2/2,sin(theta)*s**2)
+    >>> area_rhom(b=4, a=7)
+    28
+    >>> area_rhombus(d1=3, d2=4)
+    6
+    >>> area_rhom(s=2, theta=pi/2)
+    4
+    """
+    if (b is not None) & (a is not None):
+        area = b*a
+        return area
+    elif (d1 is not None) & (d2 is not None):
+        area = (d1*d2)/2
+        return area
+    else:
+        area = (s**2)*sin(theta)
+        return area
+#======================================== end of problem 13 =================================
 
 
