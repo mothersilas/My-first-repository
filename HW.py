@@ -1,20 +1,13 @@
 
-print("hello Ethiopia")
-
-print("hello Ethiopia")
-print("I was a cow boy for 15 years.")
-print("African Institute for Mathematical Sciences")
-print("Africa will be better developed!")
-print("We Africans!")
-print("We promote better Africa")
-print("African need mathematician")
-print("1+4")
-print("_+3")
-print("Hello,Python!")
-
-
-
-
+from numpy import real_if_close
+#============================== If condition1 ==================================
+weight = float(input("How many pounds does your suitcase weight? "))
+"""
+    if weight > 50:
+        print("There is a $25 charge for luggage that heavy.")
+    print("Thank you for your business.")
+    """
+#============================== end of If condition1 ==================================
 
 
 
