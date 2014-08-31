@@ -284,7 +284,7 @@ print(distance_points(0, 0, 4, 0))
 #======================================= begining of problem 15 ===================
 
 
-def distance_points(x1, y1, z1, x2, y2, z2 : Number) -> Number:
+def distance_points(x1, y1, z1, x2, y2, z2: Number) -> Number:
     """
     Find the distance between two given points in 3D.
 
