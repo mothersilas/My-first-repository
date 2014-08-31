@@ -259,4 +259,82 @@ def area_rhombus(b=None, a=None, d1=None, d2=None, s=None, theta=None):
 #print(area_rhombus(b=None, a=None, d1=None, d2=None, s=2, theta=pi/2))
 #======================================== end of problem 13 =================================
 
+#========================================== begining of problem 14===============================================
+
+
+def area_triangle(a=None, b=None, c=None,h=None, theta=None):
+     """
+     Calculate the area of a rectangle given different parameters.
+     :param a: the length of one of the adjacent side.
+     :param b: the length of the base of the triangle.
+     :param c: the length of the second adjacent side.
+     :param h: the heigth of the triangle.
+     :param theta: the included angle of the triangle.
+     :return: the area of a triangle(some square units).
+     >>> area_triangle(a=4, b=6, c=9, h=None, theta=None)
+     9.56229574945264
+    >>> area_triangle(a=None, b=6, h=8, theta=None)
+     24
+    >>> area_triangle(a=4, b=8, h=None, theta=pi/2)
+     16
+     """
+     if (a is not None) & (b is not None) & (c is not None):
+
+        area = math.sqrt((a+b+c)/2.0*(b+c-a)/2.0*(a+c-b)/2.0*(a+b-c)/2.0)
+        return area
+
+     elif (b is not None) & ( h is not None):
+        area = (b*h)/2
+        return area
+
+     else:
+        area = (a*b)*sin(theta)/2
+        return area
+#print(area_triangle(a=4, b=6, c=9, h=None, theta=None))
+#print(area_triangle(a=None, b=6, h=8, theta=None))
+#print(area_triangle(a=4, b=8, h=None, theta=pi/2))
+#================================== end of problem 14==================================
+
+#================================= begining of problem 15 ===================================
+
+
+def distance_between_points(x1, x2, y1, y2 : Number) -> Number:
+    """
+    Calculate the distance between two points in 2D.
+
+    @param x1: the first coordinate of the first point.
+    @param x2: the second coordinate of the first point.
+    @param y1: the first coordinate of the second point.
+    @param y2: the second coordinate of the second point.
+    @return: the distance between the point(some units).
+    >>> distance_between_points(0, 0, 4, 0)
+    """
+    d1 = (x2-x1)*(x2-x1)
+
+    d2 = (y2-y1)*(y2-y1)
+
+    distance = math.sqrt(d1+d2)
+
+    return distance
+
+#print(distance_between_points(0, 0, 4, 0))
+
+#================================= end of problem 15 ===================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#================================== end problem 15 ============================================
+
 
