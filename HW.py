@@ -1,31 +1,29 @@
-from pylab import *
-from numpy import *
-from square_geom import *
+#************************  begining of  problem 1 ****************************
+#lineplot.py
+#import numpy as np
+#import matplotlib.pyplot as plt
+#import numpy as np
+import pylab as pl
 
-v_square_area = np.vectorize(square_area)
-v_square_perimeter = np.vectorize(square_perimeter)
-
-S = np.linspace(0,10) # our side lengths
-
-A = v_square_area(S)  # the areas
-P = v_square_perimeter(S)  # the perimeters
-
-plot(S, A, '-r', label="Area")
-plot(S, P, ':b', label="Perimeter")
-
-xlabel('side length')
-ylabel('geo values')
-title('Square Geo Properties')
-legend(loc='upper right')
-
-show()
-
-
-
-
-
-
-
+#Make an array of x values
+x = [1, 2, 3, 4, 5]
+#Make an array of y values for each x value
+y = [1, 4, 9, 16, 25]
+# use pylab to plot x and y
+pl.plot(x, y)
+# show the plot on the screen
+pl.show()
+#******************************** end of problem 1   ********************
+#*********************************** begining of problem 2 *************
+#Make an array of x values
+x = [1, 2, 3, 4, 5, 3, 1]
+#Make an array of y values for each x value
+y = [1, 4, 9, 16, 25, 1, 10]
+# use pylab to plot x and y as red circles
+pl.plot(x, y, 'ro')
+# show the plot on the screen
+pl.show()
+#******************************* end of problem 2 ********************
 
 
 
