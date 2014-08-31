@@ -21,32 +21,32 @@ def volume_ellipsoid(a, b, c: Number) -> Number:
 #print(volume_ellipsoid(21, 15, 2))
 
 
-def circle_perimeter(radius: Number) -> Number:
+def circle_perimeter(r: Number) -> Number:
     """
     Calculate the perimeter of a circle given its radius.
 
-    @param radius: the radius of a circle.
+    @param r: the radius of a circle.
     @return: the perimeter(radius units)
     >>> circle_perimeter(3)
     18.84955592153876
     """
-    perimeter = 2*pi*radius
+    perimeter = 2*pi*r
     return perimeter
 #print(circle_perimeter(3))
 
 
-def perimeter_triangle(side1, side2, side3: Number) -> Number:
+def perimeter_triangle(s1, s2, s3: Number) -> Number:
     """
     Calculate the area of any triangle given its three sides side1,side2 and side3.
 
-    @param side1: the first side of the triangle.
-    @param side2: the second side of the triangle.
-    @param side3: the third side of the triangle.
+    @param s1: the first side of the triangle.
+    @param s2: the second side of the triangle.
+    @param s3: the third side of the triangle.
     @return: the area of the triangle(perimeter = side1+side2+side3)
     >>> perimeter_triangle(3, 4, 6)
     13
     """
-    perimeter = side1+side2+side3
+    perimeter = s1+s2+s3
     return perimeter
 #print(perimeter_triangle(3, 4, 6))
 
@@ -58,11 +58,11 @@ def area_triangle(a, b, c: Number) -> Number:
     @param a: the first side of the triangle.
     @param b: the second side of the triangle.
     @param c: the third side of the triangle.
-    @return: the area of the triangle(area = math.sqrt((a+b+c)/2.0*(b+c-a)/2.0*(a+c-b)/2.0*(a+b-c)/2.0))
+    @return: the area of the triangle(some square units)
     >>> area_triangle(10, 2, 9)
     8.181534085976786
     """
-    area = math.sqrt((a+b+c)/2.0*(b+c-a)/2.0*(a+c-b)/2.0*(a+b-c)/2.0)
+    area = math.sqrt((a+b+c)/2*(b+c-a)/2*(a+c-b)/2*(a+b-c)/2)
     return area
 #print(area_triangle(10, 2, 9))
 
@@ -78,7 +78,7 @@ def area_regular_polygon(n, s, r: Number) -> Number:
     >>> area_regular_polygon(12, 6, 2)
     72
     """
-    area = n*s*r/2.0
+    area = n*s*r/2
     return area
 #print(area_regular_polygon(12, 6, 2))
 
@@ -151,7 +151,7 @@ def volume_frustum_cone(r1, r, h: Number) -> Number:
     @param r1: radius of the lower base.
     @param r: radius of the upper  base.
     @param h: heigth of the frustum.
-    @return: the volume of the frustum(volume = pi*h*(R**2+R*r+r**2)/3)
+    @return: the volume of the frustum(volume = pi*h*(r1**2+r1*r+r**2)/3)
     >>>volume_frustum_cone(4, 2, 10)
     293.21531433504737
     """
