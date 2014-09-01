@@ -35,18 +35,28 @@ def circle_perimeter(r: Number) -> Number:
 #print(circle_perimeter(3))
 
 
-def perimeter_triangle(s1, s2, s3: Number) -> Number:
+def circle_area(r: Number) -> Number:
+    """
+    calculate area of a circle given its radius.
+    @param r: the radius of the circle.
+    @return: the area of the circle(some square unites)
+    """
+    area = pi*r**2
+    return area
+#print(circle_area(2))
+
+def perimeter_triangle(a, b, c: Number) -> Number:
     """
     Calculate the area of any triangle given its three sides side1,side2 and side3.
 
-    @param s1: the first side of the triangle.
-    @param s2: the second side of the triangle.
-    @param s3: the third side of the triangle.
+    @param a: the first side of the triangle.
+    @param b: the second side of the triangle.
+    @param c: the third side of the triangle.
     @return: the area of the triangle(perimeter = side1+side2+side3)
     >>> perimeter_triangle(3, 4, 6)
     13
     """
-    perimeter = s1+s2+s3
+    perimeter = a+b+c
     return perimeter
 #print(perimeter_triangle(3, 4, 6))
 
@@ -261,3 +271,49 @@ def distance_points_3d(x1, y1, z1, x2, y2, z2):
     return distance
 #print(distance_points_3d(0, 0, 0, 6, 0, 0))
 #print(distance_points_3d(2, 0, 5, 4, 0, 0))
+from numbers import Number
+
+def square_perimeter(side : Number) -> Number:
+    """
+    Calculate perimeter of a square from side length.
+
+    @param side: the side length
+    @return: the perimeter (same units as side length)
+
+    >>> square_perimeter(4)
+    16
+    """
+    return 4*side
+
+
+def square_area(side):
+    """
+    Calculate area of a square from side length.
+    @param side: the side length
+    @return: the area (units^2 from side)
+    >>> square_area(4)
+    16
+    """
+    return side*side
+
+def area_rectangle(l, w:  Number) -> Number:
+    """
+    calculate the area of a rectangle given its dimensions.
+    @param l: the length of the rectangle.
+    @param w: the width of the rectangle.
+    @return: the area of the rectangle(some square units)
+    """
+    area = l*w
+    return area
+
+
+def perimeter_rectangle(l, w:  Number) -> Number:
+    """
+    calculate the perimeter of a rectangle given its dimensions.
+    @param l: the length of the rectangle.
+    @param w: the width of the rectangle.
+    @return: the perimeter of the rectangle(some units)
+    """
+    perimeter = 2*(l+w)
+    return perimeter
+#print(perimeter_rectangle(2,4))
